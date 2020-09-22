@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Choco cooky';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Choco cooky'), url('Chococooky.woff') format('woff');
+}
+
+.choco-cooky {
+    font-family: 'Choco cooky';
+    font-weight: normal;
+    font-size: 50px
+}
+
+.w3-lobster {
+    font-family: 'Times New Roman', Times, serif;
+}

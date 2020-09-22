@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" href="http://pngimg.com/uploads/music_notes/music_notes_PNG83.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>M2</title>
+</head>
+
+<body class="container-fluid" style="background-image:url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/abstract-bright-blue-dna-molecular-structure-animated-background-motion-graphic-design-medical-video-clip-ultra-hd-4k-3840x2160_r0reu5dwe_thumbnail-full01.png');background-size:cover">
+    <div id="display" style="padding:10%">
+        <div class="text-center">
+            <div class="w3-lobster">
+                <p class="w3-xxxlarge">Music By Machine</p>
+            </div>
+        </div>
+        <div class="text-center">
+            <form action="/generate" method="post">
+                <div class="form-group">
+                    <input type="submit" value="Generate Music" class="btn btn-primary btn-lg" onclick="process()">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div style="display:none" class="text-center" id="display1">
+        <p class="choco-cooky">Generating Music</p>
+        <p class="choco-cooky">Please Wait....</p>
+        <img style="text-align:center" src="#" alt="" srcset="" id="image" width="20%">
+        <div style="color:black;" class="choco-cooky" id="waitingMessage"></div><span>
+    </div>
+</body>
+<script>
+    function process() {
+        //document.getElementById('image').src = "https://loading.io/spinners/double-ring/lg.double-ring-spinner.gif";
+        //document.getElementById('image').src = "https://res.cloudinary.com/dkswpljtg/image/upload/v1530194000/images/biggears.gif";
+        //document.getElementById('image').src = "https://cdn-us-east.velaro.com/Content/Images/loading.gif";
+        //document.getElementById('image').src = "https://cdn.dribbble.com/users/563824/screenshots/3633228/untitled-5.gif";
+        //document.getElementById('image').src = "https://media.giphy.com/media/Hcry3VWvhHHz2/giphy.gif";
+        document.getElementById('image').src =
+            "https://66.media.tumblr.com/bec5933eea5043acf6a37bb1394384ab/tumblr_mio4anJ5CE1rudrp1o1_400.gif";
+        x = document.createElement('img');
+        document.getElementsByTagName('img').src =
+            "https://d1j8pt39hxlh3d.cloudfront.net/uploads/zipper_mouth_face_256_1.gif";
+        document.getElementById('display').style.display = "none";
+        document.getElementById('display1').style.display = "block";
+        setTimeout(function () {
+            document.getElementById('waitingMessage').innerHTML = "Don't Give Up, It will Load soon....";
+        }, 10000);
+        setTimeout(function () {
+            document.getElementById('waitingMessage').innerHTML =
+                'Sorry to keep you wait.Just few more minutes...You will enjoy it. <img width="4%" src="https://d1j8pt39hxlh3d.cloudfront.net/uploads/zipper_mouth_face_256_1.gif" alt="Emoji">';
+        }, 20000);
+    }
+</script>
+
+</html>
